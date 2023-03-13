@@ -1,0 +1,50 @@
+[2023-03-13 20:38:09,172] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting WriterArquivoLarguraFixaJobApplication using Java 17.0.5 with PID 8556 (C:\training\batch\WriterArquivoLarguraFixaJob\target\classes started by dalexadi in C:\training\batch\WriterArquivoLarguraFixaJob)
+[2023-03-13 20:38:09,175] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-13 20:38:09,739] [org.springframework.context.support.AbstractApplicationContext] [main] [592] [WARN ] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+[2023-03-13 20:38:09,746] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] [main] [82] [INFO ] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2023-03-13 20:38:09,770] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [main] [40] [ERROR] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles dev are currently active).
+
+[2023-03-13 20:40:32,864] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting WriterArquivoLarguraFixaJobApplication using Java 17.0.5 with PID 17812 (C:\training\batch\WriterArquivoLarguraFixaJob\target\classes started by dalexadi in C:\training\batch\WriterArquivoLarguraFixaJob)
+[2023-03-13 20:40:32,868] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-13 20:40:33,505] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-13 20:40:34,027] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13d9261f
+[2023-03-13 20:40:34,029] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-13 20:40:34,201] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started WriterArquivoLarguraFixaJobApplication in 1.722 seconds (process running for 2.291)
+[2023-03-13 20:40:34,202] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: []
+[2023-03-13 20:40:34,207] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-13 20:40:34,238] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-13 20:58:09,322] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting WriterArquivoLarguraFixaJobApplication using Java 17.0.5 with PID 4236 (C:\training\batch\WriterArquivoLarguraFixaJob\target\classes started by dalexadi in C:\training\batch\WriterArquivoLarguraFixaJob)
+[2023-03-13 20:58:09,324] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-13 20:58:09,953] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-13 20:58:10,288] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2643d762
+[2023-03-13 20:58:10,290] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-13 20:58:10,565] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started WriterArquivoLarguraFixaJobApplication in 1.575 seconds (process running for 2.056)
+[2023-03-13 20:58:10,568] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: []
+[2023-03-13 20:58:10,657] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [154] [INFO ] Job: [SimpleJob: [name=ArquivoLarguraFixaJob]] launched with the following parameters: [{'run.id':'{value=1, type=class java.lang.Long, identifying=true}'}]
+[2023-03-13 20:58:10,690] [org.springframework.batch.core.job.SimpleStepHandler] [main] [150] [INFO ] Executing step: [arquivoLarguraFixaStep]
+[2023-03-13 20:58:10,723] [br.com.training.WriterArquivoLarguraFixaJob.writer.ArquivoLarguraFixaWriterConfig] [main] [17] [INFO ] Cliente(nome=João, sobrenome=Silva, idade=32, email=joao@test.com)
+[2023-03-13 20:58:10,730] [br.com.training.WriterArquivoLarguraFixaJob.writer.ArquivoLarguraFixaWriterConfig] [main] [17] [INFO ] Cliente(nome=Maria, sobrenome=Silva, idade=30, email=maria@test.com)
+[2023-03-13 20:58:10,735] [br.com.training.WriterArquivoLarguraFixaJob.writer.ArquivoLarguraFixaWriterConfig] [main] [17] [INFO ] Cliente(nome=José, sobrenome=Silva, idade=20, email=jose@test.com)
+[2023-03-13 20:58:10,747] [org.springframework.batch.core.step.AbstractStep] [main] [293] [INFO ] Step: [arquivoLarguraFixaStep] executed in 56ms
+[2023-03-13 20:58:10,758] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [161] [INFO ] Job: [SimpleJob: [name=ArquivoLarguraFixaJob]] completed with the following parameters: [{'run.id':'{value=1, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 86ms
+[2023-03-13 20:58:10,762] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-13 20:58:10,805] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
