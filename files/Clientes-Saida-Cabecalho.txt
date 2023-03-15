@@ -1,6 +1,9 @@
-este é o cabeçalho do arquivo[null] João - Silva
+Este é o cabeçalho do arquivo
 
-este é o cabeçalho do arquivo[null] Maria - Silva
+[null] João - Silva
 
-este é o cabeçalho do arquivo[null] José - Silva
+[null] Maria - Silva
 
+[null] José - Silva
+
+Este é o rodapé do arquivo
