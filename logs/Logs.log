@@ -1,50 +1,112 @@
-[2023-03-13 20:38:09,172] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting WriterArquivoLarguraFixaJobApplication using Java 17.0.5 with PID 8556 (C:\training\batch\WriterArquivoLarguraFixaJob\target\classes started by dalexadi in C:\training\batch\WriterArquivoLarguraFixaJob)
-[2023-03-13 20:38:09,175] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
-[2023-03-13 20:38:09,739] [org.springframework.context.support.AbstractApplicationContext] [main] [592] [WARN ] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
-[2023-03-13 20:38:09,746] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] [main] [82] [INFO ] 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-[2023-03-13 20:38:09,770] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [main] [40] [ERROR] 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
-
-Reason: Failed to determine a suitable driver class
-
-
-Action:
-
-Consider the following:
-	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
-	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles dev are currently active).
-
-[2023-03-13 20:40:32,864] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting WriterArquivoLarguraFixaJobApplication using Java 17.0.5 with PID 17812 (C:\training\batch\WriterArquivoLarguraFixaJob\target\classes started by dalexadi in C:\training\batch\WriterArquivoLarguraFixaJob)
-[2023-03-13 20:40:32,868] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
-[2023-03-13 20:40:33,505] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
-[2023-03-13 20:40:34,027] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13d9261f
-[2023-03-13 20:40:34,029] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
-[2023-03-13 20:40:34,201] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started WriterArquivoLarguraFixaJobApplication in 1.722 seconds (process running for 2.291)
-[2023-03-13 20:40:34,202] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: []
-[2023-03-13 20:40:34,207] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
-[2023-03-13 20:40:34,238] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
-[2023-03-13 20:58:09,322] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting WriterArquivoLarguraFixaJobApplication using Java 17.0.5 with PID 4236 (C:\training\batch\WriterArquivoLarguraFixaJob\target\classes started by dalexadi in C:\training\batch\WriterArquivoLarguraFixaJob)
-[2023-03-13 20:58:09,324] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
-[2023-03-13 20:58:09,953] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
-[2023-03-13 20:58:10,288] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2643d762
-[2023-03-13 20:58:10,290] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
-[2023-03-13 20:58:10,565] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started WriterArquivoLarguraFixaJobApplication in 1.575 seconds (process running for 2.056)
-[2023-03-13 20:58:10,568] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: []
-[2023-03-13 20:58:10,657] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [154] [INFO ] Job: [SimpleJob: [name=ArquivoLarguraFixaJob]] launched with the following parameters: [{'run.id':'{value=1, type=class java.lang.Long, identifying=true}'}]
-[2023-03-13 20:58:10,690] [org.springframework.batch.core.job.SimpleStepHandler] [main] [150] [INFO ] Executing step: [arquivoLarguraFixaStep]
-[2023-03-13 20:58:10,723] [br.com.training.WriterArquivoLarguraFixaJob.writer.ArquivoLarguraFixaWriterConfig] [main] [17] [INFO ] Cliente(nome=João, sobrenome=Silva, idade=32, email=joao@test.com)
-[2023-03-13 20:58:10,730] [br.com.training.WriterArquivoLarguraFixaJob.writer.ArquivoLarguraFixaWriterConfig] [main] [17] [INFO ] Cliente(nome=Maria, sobrenome=Silva, idade=30, email=maria@test.com)
-[2023-03-13 20:58:10,735] [br.com.training.WriterArquivoLarguraFixaJob.writer.ArquivoLarguraFixaWriterConfig] [main] [17] [INFO ] Cliente(nome=José, sobrenome=Silva, idade=20, email=jose@test.com)
-[2023-03-13 20:58:10,747] [org.springframework.batch.core.step.AbstractStep] [main] [293] [INFO ] Step: [arquivoLarguraFixaStep] executed in 56ms
-[2023-03-13 20:58:10,758] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [161] [INFO ] Job: [SimpleJob: [name=ArquivoLarguraFixaJob]] completed with the following parameters: [{'run.id':'{value=1, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 86ms
-[2023-03-13 20:58:10,762] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
-[2023-03-13 20:58:10,805] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-15 15:59:28,324] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting WriterArquivoLarguraFixaJobApplication using Java 17.0.5 with PID 10488 (C:\training\batch\WriterArquivoLarguraFixaJob\target\classes started by dalexadi in C:\training\batch\WriterArquivoLarguraFixaJob)
+[2023-03-15 15:59:28,348] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-15 15:59:29,144] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-15 15:59:29,491] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e33d73e
+[2023-03-15 15:59:29,493] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-15 15:59:29,832] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started WriterArquivoLarguraFixaJobApplication in 1.899 seconds (process running for 2.489)
+[2023-03-15 15:59:29,834] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: []
+[2023-03-15 15:59:29,962] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [154] [INFO ] Job: [SimpleJob: [name=ArquivoLarguraFixaJob]] launched with the following parameters: [{'run.id':'{value=2, type=class java.lang.Long, identifying=true}'}]
+[2023-03-15 15:59:29,997] [org.springframework.batch.core.job.SimpleStepHandler] [main] [150] [INFO ] Executing step: [arquivoLarguraFixaStep]
+[2023-03-15 15:59:30,036] [br.com.training.WriterArquivoLarguraFixaJob.writer.ArquivoLarguraFixaWriterConfig] [main] [17] [INFO ] Cliente(nome=João, sobrenome=Silva, idade=32, email=joao@test.com)
+[2023-03-15 15:59:30,042] [br.com.training.WriterArquivoLarguraFixaJob.writer.ArquivoLarguraFixaWriterConfig] [main] [17] [INFO ] Cliente(nome=Maria, sobrenome=Silva, idade=30, email=maria@test.com)
+[2023-03-15 15:59:30,049] [br.com.training.WriterArquivoLarguraFixaJob.writer.ArquivoLarguraFixaWriterConfig] [main] [17] [INFO ] Cliente(nome=José, sobrenome=Silva, idade=20, email=jose@test.com)
+[2023-03-15 15:59:30,070] [org.springframework.batch.core.step.AbstractStep] [main] [293] [INFO ] Step: [arquivoLarguraFixaStep] executed in 70ms
+[2023-03-15 15:59:30,086] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [161] [INFO ] Job: [SimpleJob: [name=ArquivoLarguraFixaJob]] completed with the following parameters: [{'run.id':'{value=2, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 107ms
+[2023-03-15 15:59:30,092] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-15 15:59:30,100] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-15 16:08:46,692] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting WriterArquivoLarguraFixaJobApplication using Java 17.0.5 with PID 10716 (C:\training\batch\WriterArquivoLarguraFixaJob\target\classes started by dalexadi in C:\training\batch\WriterArquivoLarguraFixaJob)
+[2023-03-15 16:08:46,696] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-15 16:08:47,436] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-15 16:08:47,771] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71a06021
+[2023-03-15 16:08:47,773] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-15 16:08:48,131] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started WriterArquivoLarguraFixaJobApplication in 1.813 seconds (process running for 2.318)
+[2023-03-15 16:08:48,133] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: []
+[2023-03-15 16:08:48,267] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [154] [INFO ] Job: [SimpleJob: [name=ArquivoLarguraFixaJob]] launched with the following parameters: [{'run.id':'{value=3, type=class java.lang.Long, identifying=true}'}]
+[2023-03-15 16:08:48,305] [org.springframework.batch.core.job.SimpleStepHandler] [main] [150] [INFO ] Executing step: [arquivoLarguraFixaStep]
+[2023-03-15 16:08:48,391] [org.springframework.batch.core.step.AbstractStep] [main] [293] [INFO ] Step: [arquivoLarguraFixaStep] executed in 84ms
+[2023-03-15 16:08:48,408] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [161] [INFO ] Job: [SimpleJob: [name=ArquivoLarguraFixaJob]] completed with the following parameters: [{'run.id':'{value=3, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 123ms
+[2023-03-15 16:08:48,414] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-15 16:08:48,422] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-15 16:09:44,317] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting WriterArquivoLarguraFixaJobApplication using Java 17.0.5 with PID 19992 (C:\training\batch\WriterArquivoLarguraFixaJob\target\classes started by dalexadi in C:\training\batch\WriterArquivoLarguraFixaJob)
+[2023-03-15 16:09:44,319] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-15 16:09:44,980] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-15 16:09:45,309] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@895416d
+[2023-03-15 16:09:45,311] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-15 16:09:45,624] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started WriterArquivoLarguraFixaJobApplication in 1.622 seconds (process running for 2.107)
+[2023-03-15 16:09:45,628] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: []
+[2023-03-15 16:09:45,749] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [154] [INFO ] Job: [SimpleJob: [name=ArquivoLarguraFixaJob]] launched with the following parameters: [{'run.id':'{value=4, type=class java.lang.Long, identifying=true}'}]
+[2023-03-15 16:09:45,779] [org.springframework.batch.core.job.SimpleStepHandler] [main] [150] [INFO ] Executing step: [arquivoLarguraFixaStep]
+[2023-03-15 16:09:45,817] [org.springframework.batch.core.step.AbstractStep] [main] [257] [ERROR] Encountered an error executing step arquivoLarguraFixaStep in job ArquivoLarguraFixaJob
+java.util.UnknownFormatConversionException: Conversion = '1'
+	at java.base/java.util.Formatter.parse(Formatter.java:2750)
+	at java.base/java.util.Formatter.format(Formatter.java:2671)
+	at java.base/java.util.Formatter.format(Formatter.java:2625)
+	at java.base/java.lang.String.format(String.java:4184)
+	at org.springframework.batch.item.file.transform.FormatterLineAggregator.doAggregate(FormatterLineAggregator.java:82)
+	at org.springframework.batch.item.file.transform.ExtractorLineAggregator.aggregate(ExtractorLineAggregator.java:66)
+	at org.springframework.batch.item.file.FlatFileItemWriter.doWrite(FlatFileItemWriter.java:78)
+	at org.springframework.batch.item.support.AbstractFileItemWriter.write(AbstractFileItemWriter.java:235)
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.writeItems(SimpleChunkProcessor.java:203)
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.doWrite(SimpleChunkProcessor.java:170)
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.write(SimpleChunkProcessor.java:297)
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.process(SimpleChunkProcessor.java:227)
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:75)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:389)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:313)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:256)
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82)
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:362)
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:206)
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:139)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:241)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:227)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:153)
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:417)
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:132)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:316)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:157)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:148)
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:70)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:199)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:178)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:166)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:161)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:156)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:760)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at br.com.training.WriterArquivoLarguraFixaJob.WriterArquivoLarguraFixaJobApplication.main(WriterArquivoLarguraFixaJobApplication.java:10)
+[2023-03-15 16:09:45,823] [org.springframework.batch.core.step.AbstractStep] [main] [293] [INFO ] Step: [arquivoLarguraFixaStep] executed in 43ms
+[2023-03-15 16:09:45,846] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [161] [INFO ] Job: [SimpleJob: [name=ArquivoLarguraFixaJob]] completed with the following parameters: [{'run.id':'{value=4, type=class java.lang.Long, identifying=true}'}] and the following status: [FAILED] in 76ms
+[2023-03-15 16:09:45,856] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-15 16:09:45,881] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-15 16:10:25,638] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting WriterArquivoLarguraFixaJobApplication using Java 17.0.5 with PID 18080 (C:\training\batch\WriterArquivoLarguraFixaJob\target\classes started by dalexadi in C:\training\batch\WriterArquivoLarguraFixaJob)
+[2023-03-15 16:10:25,641] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-15 16:10:26,327] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-15 16:10:26,664] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a0e7ecd
+[2023-03-15 16:10:26,666] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-15 16:10:26,976] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started WriterArquivoLarguraFixaJobApplication in 1.645 seconds (process running for 2.114)
+[2023-03-15 16:10:26,979] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: []
+[2023-03-15 16:10:27,106] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [154] [INFO ] Job: [SimpleJob: [name=ArquivoLarguraFixaJob]] launched with the following parameters: [{'run.id':'{value=5, type=class java.lang.Long, identifying=true}'}]
+[2023-03-15 16:10:27,141] [org.springframework.batch.core.job.SimpleStepHandler] [main] [150] [INFO ] Executing step: [arquivoLarguraFixaStep]
+[2023-03-15 16:10:27,231] [org.springframework.batch.core.step.AbstractStep] [main] [293] [INFO ] Step: [arquivoLarguraFixaStep] executed in 88ms
+[2023-03-15 16:10:27,255] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [161] [INFO ] Job: [SimpleJob: [name=ArquivoLarguraFixaJob]] completed with the following parameters: [{'run.id':'{value=5, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 128ms
+[2023-03-15 16:10:27,267] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-15 16:10:27,282] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-15 16:11:31,009] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting WriterArquivoLarguraFixaJobApplication using Java 17.0.5 with PID 11156 (C:\training\batch\WriterArquivoLarguraFixaJob\target\classes started by dalexadi in C:\training\batch\WriterArquivoLarguraFixaJob)
+[2023-03-15 16:11:31,012] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-15 16:11:31,632] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-15 16:11:31,963] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@476fe690
+[2023-03-15 16:11:31,965] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-15 16:11:32,249] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started WriterArquivoLarguraFixaJobApplication in 1.545 seconds (process running for 2.068)
+[2023-03-15 16:11:32,252] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: []
+[2023-03-15 16:11:32,359] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [154] [INFO ] Job: [SimpleJob: [name=ArquivoLarguraFixaJob]] launched with the following parameters: [{'run.id':'{value=6, type=class java.lang.Long, identifying=true}'}]
+[2023-03-15 16:11:32,386] [org.springframework.batch.core.job.SimpleStepHandler] [main] [150] [INFO ] Executing step: [arquivoLarguraFixaStep]
+[2023-03-15 16:11:32,441] [org.springframework.batch.core.step.AbstractStep] [main] [293] [INFO ] Step: [arquivoLarguraFixaStep] executed in 55ms
+[2023-03-15 16:11:32,455] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [161] [INFO ] Job: [SimpleJob: [name=ArquivoLarguraFixaJob]] completed with the following parameters: [{'run.id':'{value=6, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 82ms
+[2023-03-15 16:11:32,459] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-15 16:11:32,471] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.

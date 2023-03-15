@@ -16,11 +16,11 @@ public class ArquivoLarguraFixaStepConfig {
     @Bean
     public Step arquivoLarguraFixaStep(JobRepository jobRepository,
                                          PlatformTransactionManager transactionManager,
-                                         ItemReader<Cliente> arquivoLarguraFixaReader,
+                                         ItemReader<Cliente> arquivoLarguraFixaWriterFormatadoArquivoExterno,
                                          ItemWriter<Cliente> arquivoLarguraFixaWriter) {
         return new StepBuilder("arquivoLarguraFixaStep",jobRepository)
                 .<Cliente,Cliente> chunk(1)
-                .reader(arquivoLarguraFixaReader)
+                .reader(arquivoLarguraFixaWriterFormatadoArquivoExterno)
                 .writer(arquivoLarguraFixaWriter)
                 .transactionManager(transactionManager)
                 .build();
