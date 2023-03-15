@@ -5,7 +5,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.batch.item.file.FlatFileHeaderCallback;
 import org.springframework.batch.item.file.FlatFileItemWriter;
+import org.springframework.batch.item.file.MultiResourceItemWriter;
+import org.springframework.batch.item.file.ResourceSuffixCreator;
 import org.springframework.batch.item.file.builder.FlatFileItemWriterBuilder;
+import org.springframework.batch.item.file.builder.MultiResourceItemWriterBuilder;
 import org.springframework.batch.item.file.transform.LineAggregator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,6 +21,26 @@ import java.io.Writer;
 public class ArquivoLarguraFixaWriterConfig {
 
     private static final Logger LOGGER = LogManager.getLogger();
+
+    @Bean
+    public MultiResourceItemWriter<Cliente> multiResourcesItemWriter(FlatFileItemWriter<Cliente> arquivoLarguraFixaWriterFormatadoArquivoExterno){
+        return new MultiResourceItemWriterBuilder<Cliente>()
+                .name("multiResourcesItemWriter")
+                .resource(new PathResource("files/multiplos"))
+                .resourceSuffixCreator(suffixCreator())
+                .delegate(arquivoLarguraFixaWriterFormatadoArquivoExterno)
+                .itemCountLimitPerResource(1)
+                .build();
+    }
+
+    private ResourceSuffixCreator suffixCreator() {
+        return new ResourceSuffixCreator() {
+            @Override
+            public String getSuffix(int index) {
+                return index + ".txt";
+            }
+        };
+    }
 
     @Bean
     public FlatFileItemWriter<Cliente> arquivoLarguraFixaWriterFormatadoArquivoExterno(ClienteRodape rodapeCallBack){

@@ -6,6 +6,7 @@ import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
+import org.springframework.batch.item.file.MultiResourceItemWriter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -17,11 +18,11 @@ public class ArquivoLarguraFixaStepConfig {
     public Step arquivoLarguraFixaStep(JobRepository jobRepository,
                                          PlatformTransactionManager transactionManager,
                                          ItemReader<Cliente> arquivoLarguraFixaWriterFormatadoArquivoExterno,
-                                         ItemWriter<Cliente> arquivoLarguraFixaWriter) {
+                                         MultiResourceItemWriter<Cliente> multiResourcesItemWriter) {
         return new StepBuilder("arquivoLarguraFixaStep",jobRepository)
                 .<Cliente,Cliente> chunk(1)
                 .reader(arquivoLarguraFixaWriterFormatadoArquivoExterno)
-                .writer(arquivoLarguraFixaWriter)
+                .writer(multiResourcesItemWriter)
                 .transactionManager(transactionManager)
                 .build();
     }
